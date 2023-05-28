@@ -1,9 +1,7 @@
 # STAug
 This is the official implementation for ICASSP'23 paper [Towards Diverse and Coherent Augmentation for Time-Series Forecasting](https://arxiv.org/abs/2303.14254). We combine Spectral and Time Augmentation (STAug) for generating more diverse and coherent samples. 
 
-Specifically, in the frequency domain, we use the Empirical Mode Decomposition to decompose a time series and reassemble the subcomponents with random weights. This way, we generate diverse samples while being coherent with the original temporal relationships as they contain the same set of base components. 
-
-In the time domain, we adapt a mix-up strategy that generates diverse as well as linearly in-between coherent samples. 
+Specifically, in the frequency domain, we use the Empirical Mode Decomposition to decompose a time series and reassemble the subcomponents with random weights. This way, we generate diverse samples while being coherent with the original temporal relationships as they contain the same set of base components. In the time domain, we adapt a mix-up strategy that generates diverse as well as linearly in-between coherent samples. 
 
 Experiments on five real-world time-series datasets demonstrate that STAug outperforms the base models without data augmentation as well as state-of-the-art augmentation methods.
 
@@ -28,7 +26,7 @@ train and evaluate STAug on all five dataset:
 
 ```bash ./scripts/run.sh```
 
-`emd_scale`: emd_scale = 1: compute emd for the entire sequence (more efficient); emd_scale = 0: separately compute emd for each segment 
+`emd_scale`: emd_scale = 1: compute Empirical Mode Decomposition for the entire sequence (more efficient); emd_scale = 0: separately compute Empirical Mode Decomposition for each segment 
 
 ## Citation
 
